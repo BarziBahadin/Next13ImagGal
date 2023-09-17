@@ -1,5 +1,10 @@
+import Navbar from "./components/navBar";
+
 import "./globals.css";
+
 import type { Metadata } from "next";
+
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: "NextJs imag gallery",
@@ -15,6 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
+        <Navbar />
+
       <main className="max-w-6xl mx-auto">
          {children}
       </main>
